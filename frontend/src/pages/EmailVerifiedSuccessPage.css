@@ -1,0 +1,74 @@
+.email-verified-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5; /* Light gray background */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.email-verified-card {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  color: #28a745; /* Green color for success */
+  margin-bottom: 20px;
+}
+
+.success-title {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.success-message {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.login-button-success {
+  display: inline-block;
+  background-color: #007bff; /* Primary blue */
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.login-button-success:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .email-verified-card {
+    padding: 30px;
+  }
+  .success-title {
+    font-size: 24px;
+  }
+  .success-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .login-button-success {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+}
