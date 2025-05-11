@@ -17,11 +17,12 @@
       "dest": "app.js"
     },
     {
-      "src": "/(.*)",
-      "headers": {
-        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://task-hub-six.vercel.app; font-src 'self'; manifest-src 'self'; connect-src 'self' https://task-hub-six.vercel.app;"
-      },
+      "src": "/api/(.*)",
       "dest": "app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/frontend/build/index.html"
     }
   ]
 }
