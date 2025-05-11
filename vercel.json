@@ -1,17 +1,27 @@
 {
-    "builds": [
+  "version": 2,
+  "builds": [
     {
-    "src": "./app.js",
-    "use": "@vercel/node"
-    }
-    ],
-    "routes": [
+      "src": "frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "outputDirectory": "frontend/build" }
+    },
     {
-    "src": "/.*",
-    "dest": "app.js",
-    "headers": {
-        "Content-Security-Policy": "default-src 'none'; img-src 'self' https://task-hub-six.vercel.app;"
+      "src": "app.js",
+      "use": "@vercel/node"
     }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "app.js"
+    },
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://task-hub-six.vercel.app; font-src 'self'; manifest-src 'self'; connect-src 'self' https://task-hub-six.vercel.app;"
+      },
+      "dest": "app.js"
     }
-    ]
-    }
+  ]
+}
