@@ -8,7 +8,10 @@
     "routes": [
     {
     "src": "/.*",
-    "dest": "app.js"
+    "dest": "app.js",
+    "headers": {
+        "Content-Security-Policy": "default-src 'none'; img-src 'self' https://task-hub-six.vercel.app;"
+    }
     }
     ]
     }
